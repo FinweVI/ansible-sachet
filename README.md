@@ -16,20 +16,17 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `sachet_instance` | {{ ansible_fqdn \| default(ansible_host) \| default(inventory_hostname) }} | Sachet instance name |
 | `sachet_address` | 127.0.0.1 | Address on which sachet listens |
 | `sachet_port` | 9876 | port on which sachet listens |
-| `sachet_repository ` | github.com/messagebird/sachet/cmd/sachet | github link to the source code |
+| `sachet_repository ` | github.com/messagebird/sachet | github link to the source code |
+| `sachet_providers` | [] | yaml list of provider for sachet |
+| `sachet_receivers` | [] | yaml list of receiver for sachet |
 
-Mandatory Variables:
+See the [defaults/main.yml](defaults/main.yml) file for examples.
 
-| Name                  |  Description                        |
-| --------------------- | -----------------------------------|
-| `freemobile_username` | FreeMobile Username for API Usage |
-| `freemobile_password` | FreeMobile Password for API Usage |
 
 ## Notes
 
-This role works only with the [FreeMobile]('https://mobile.free.fr/') Carrier Provider.  
-It's Debian-based Only.  
-
-Issues & PR are welcome for any improvement.  
+It's Debian-based Only.
+It must be possible to make it CentOS (or any other linux-based OS) compatible.
+Issues & PR are welcome for any improvement ;-)
 
 This is heavily inspired by [CloudAlchemy]('https://github.com/cloudalchemy/')
