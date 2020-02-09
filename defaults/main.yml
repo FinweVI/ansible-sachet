@@ -1,7 +1,8 @@
 ---
-sachet_version: latest
+sachet_version: 0.2.2
 
 sachet_instance: "{{ ansible_fqdn | default(ansible_host) | default(inventory_hostname) }}"
+sachet_repository: "github.com/messagebird/sachet"
 
 sachet_address: "127.0.0.1"
 sachet_port: 9876
