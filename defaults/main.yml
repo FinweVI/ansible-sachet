@@ -1,5 +1,5 @@
 ---
-sachet_version: 0.2.2
+sachet_version: 0.2.3
 
 sachet_instance: "{{ ansible_fqdn | default(ansible_host) | default(inventory_hostname) }}"
 sachet_repository: "github.com/messagebird/sachet"
