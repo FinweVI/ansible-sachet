@@ -20,13 +20,13 @@
       package:
         name: "{{ sachet_dependencies }}"
         state: present
-    
+
     - name: go get sachet
       command: "go get -u {{ sachet_repository }}/cmd/sachet@{{ sachet_version }}"
       environment:
         GO111MODULE: "on"
         GOPATH: "{{ ansible_env.HOME }}/go"
-    
+
     - name: propagate sachet binaries
       copy:
         remote_src: yes
@@ -67,5 +67,5 @@
       with_items:
         - sachet
       notify:
-        - restart sachet 
+        - restart sachet
   when: ansible_facts['architecture'] == "x86_64"
