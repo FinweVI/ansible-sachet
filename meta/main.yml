@@ -21,4 +21,6 @@ galaxy_info:
     - prometheus
     - alerting
 
-dependencies: []
+dependencies:
+  - role: gantsign.golang
+    when: ansible_facts['architecture'] != "x86_64"

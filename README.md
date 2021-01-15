@@ -4,7 +4,8 @@ Provision and manage [sachet](https://github.com/messagebird/sachet) - plugin to
 
 ## Requirements
 
-- Ansible >= 2.5
+- Ansible >= 2.8
+- Role `gantsign.golang` for non-Intel architechtures
 
 ## Role Variables
 
@@ -19,6 +20,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `sachet_repository ` | github.com/messagebird/sachet | github link to the source code |
 | `sachet_providers` | [] | yaml list of provider for sachet |
 | `sachet_receivers` | [] | yaml list of receiver for sachet |
+| `golang_gopath` | None | Required if you're using a non-Intel CPU Architechture as `Sachet` will be built from sources |
 
 See the [defaults/main.yml](defaults/main.yml) file for examples.
 
