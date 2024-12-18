@@ -21,8 +21,8 @@
         name: "{{ sachet_dependencies }}"
         state: present
 
-    - name: go get sachet
-      command: "{{ ansible_local.golang.general.home }}/bin/go get -u {{ sachet_repository }}/cmd/sachet@{{ sachet_version }}"
+    - name: go install sachet
+      command: "{{ ansible_local.golang.general.home }}/bin/go install {{ sachet_repository }}/cmd/sachet@{{ sachet_version }}"
       environment:
         GO111MODULE: "on"
         GOPATH: "{{ golang_gopath }}"
